@@ -33,10 +33,14 @@
 
 -(void)tapHandler:(UITapGestureRecognizer *)gestureRecognizer
 {
-    if labels tag = 1,2,3
-    {
-        
-    }
+    UIView *labelView = gestureRecognizer.view;
+    NSLog(@"%ld", labelView.tag);
+}
+
+-(void)roll:(DieLabel *)die
+{
+    int i = arc4random_uniform(5);
+    die.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[@"%ld", i]]];
 }
 
 
