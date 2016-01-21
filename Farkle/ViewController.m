@@ -7,21 +7,35 @@
 //
 
 #import "ViewController.h"
+#import "DieLabel.h"
 
-@interface ViewController ()
+@interface ViewController () <UIGestureRecognizerDelegate>
+@property DieLabel *die1;
+@property DieLabel *die2;
+@property DieLabel *die3;
+@property DieLabel *die4;
+@property DieLabel *die5;
+@property DieLabel *die6;
+@property NSMutableArray *dice;
+
+
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.die1 = [[DieLabel alloc]init];
+    self.die2 = [[DieLabel alloc]init];
+    self.die3 = [[DieLabel alloc]init];
+    self.die4 = [[DieLabel alloc]init];
+    self.die5 = [[DieLabel alloc]init];
+    self.die6 = [[DieLabel alloc]init];
+    
+    self.dice = [NSMutableArray arrayWithObjects:self.die1, self.die2, self.die3, self.die4, self.die5, self.die6, nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
